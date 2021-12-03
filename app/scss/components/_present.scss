@@ -1,0 +1,18 @@
+.present{
+  background-color: $accent;
+  &__img{
+    width: 431px;
+    margin-right: 65px;
+  }
+  &-info{
+    max-width: 550px;
+    &__title{
+      font:900 30px/35px var(--font);
+      color: $white;
+      margin-bottom: 20px;
+    }
+    &__text{
+      color: $white;
+    }
+  }
+}

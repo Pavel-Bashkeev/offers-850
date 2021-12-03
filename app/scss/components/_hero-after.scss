@@ -1,0 +1,19 @@
+.hero-after{
+  .container{
+    .hero-content{
+      grid-template-areas:
+      'title title'
+      'subtitle subtitle'
+      '. banner'
+      'action price'
+      'action .'
+      'remains remains'
+    ;
+    }
+  }
+}
+.hero-action{
+  grid-area: action;
+  width: 380px;
+  padding: 0 5px;
+}

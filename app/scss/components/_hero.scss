@@ -1,0 +1,355 @@
+.hero {
+  min-height: 630px;
+  background: radial-gradient(49.53% 394.88% at 50% 50%, rgba(255, 255, 255, 0.9) 55.2%, rgba(255, 255, 255, 0.468) 100%), center/cover no-repeat url('../images/dest/hero/hero-bg.jpg');
+  overflow: hidden;
+
+  &__container {
+    padding-bottom: 52px;
+    position: relative;
+  }
+
+  &-content {
+    padding: 32px 0 0;
+    grid-template-columns: 540px 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      'title title'
+      'subtitle subtitle'
+      '. banner'
+      'list price'
+    ;
+    z-index: 1;
+  }
+
+  &-actions {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    grid-area: title;
+    font: 900 40px/47px var(--font);
+    color: #5A0000;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    max-width: 320px;
+
+    &--accent {
+      color: #A81E00;
+    }
+  }
+
+  &__subtitle {
+    grid-area: subtitle;
+    font: 400 25px/30px var(--font);
+    color: #2B2B2B;
+    max-width: 520px;
+    padding-right: 10px;
+  }
+
+  &-banner {
+    grid-area: banner;
+    background: #54B134;
+    border-radius: 5px;
+    padding: 5px 10px 5px 20px;
+    width: fit-content;
+    margin-bottom: 10px;
+    transform: translateX(-160px);
+
+    &__icon {
+      width: 35px;
+      margin-right: 20px;
+    }
+
+    &__text {
+      font: 500 16px/19px var(--font-logo);
+      color: $white;
+      max-width: 130px;
+    }
+  }
+
+  &-price {
+    grid-area: price;
+    background-color: $accent;
+    max-width: 575px;
+    padding: 15px 30px 23px;
+    transform: translateX(-160px);
+    height: fit-content;
+
+    &__new {
+      &-text {
+        font: 400 25px/30px var(--font);
+        color: $white;
+      }
+
+      &-count {
+        font: 900 60px/76px var(--font);
+        color: $white;
+      }
+    }
+
+    &__old {
+      font: 500 40px/50px var(--font);
+      color: $white;
+      text-decoration: line-through;
+    }
+  }
+
+  &-list {
+    grid-area: list;
+    margin-bottom: 32px;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      &-icon {
+        width: 62px;
+        margin-right: 10px;
+      }
+
+      &-text {
+        font: 400 20px/24px var(--font);
+        color: #2b2b2b;
+        max-width: 275px;
+      }
+    }
+
+  }
+
+  &__link {
+    margin-bottom: 45px;
+  }
+
+  &-remains {
+    font: 500 20px/24px var(--font);
+    width: fit-content;
+    margin-left: 50px;
+
+    &__count {
+      background-color: #f00;
+      color: $white;
+      padding: 0 2px;
+
+    }
+  }
+
+  &-present {
+    align-items: flex-end;
+    margin: auto auto 0;
+    transform: translateX(200px);
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+
+    &__front {
+      margin-right: -50px;
+      z-index: 1;
+
+      &-img--small {
+        display: none;
+      }
+
+      &-decor {
+        left: 73px;
+        top: 50%;
+        transform: translateY(-30%);
+        filter: drop-shadow(0px 0px 10px #FF3407);
+        animation: flashing 3s infinite ease-in-out;
+      }
+    }
+
+    &__back {
+      &-decor {
+        top: 50%;
+        left: 50%;
+        filter: drop-shadow(0px 0px 10px #FF3407);
+        animation: flashing 3s infinite ease-in-out;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &-discount {
+    width: 112px;
+    height: 112px;
+    background-image: url('../images/dest/hero/discount-bg.png');
+    @extend %bg-cover;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15%;
+    right: 0;
+
+    &__text {
+      font: 700 24px/28px var(--font);
+      color: $white;
+    }
+  }
+}
+
+@keyframes flashing {
+  0% {
+    filter: drop-shadow(0px 0px 10px #FF3407);
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 0px #FF3407);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 10px #FF3407);
+  }
+}
+
+@media (max-width:1250px) {
+  .hero-price {
+    max-width: 675px;
+  }
+
+  .hero-present {
+    right: 0;
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width:1150px) {
+  .hero {
+    background: none;
+    padding-bottom: 40px;
+    &__container {
+      padding: 0;
+    }
+
+    &__link {
+      margin: 0 auto 45px;
+    }
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      'title'
+      'subtitle'
+      'banner'
+      'list'
+      'price';
+    z-index: 1;
+    position: relative;
+    padding: 32px 15px 60px;
+    background: radial-gradient(49.53% 394.88% at 50% 50%, rgba(255, 255, 255, 0.9) 55.2%, rgba(255, 255, 255, 0.468) 100%), center/cover no-repeat url('../images/dest/hero/hero-bg.jpg');
+    margin-bottom: 40px;
+  }
+
+  .hero__subtitle {
+    margin-bottom: 20px;
+  }
+
+  .hero-banner,
+  .hero-price {
+    transform: translateX(0);
+  }
+
+  .hero-banner {
+    margin-bottom: 20px;
+  }
+
+  .hero-price {
+    margin-left: -15px;
+  }
+
+  .hero-remains {
+    margin: 0 auto;
+
+  }
+}
+
+@media (max-width:900px) {
+  .hero-present__back {
+    display: none;
+  }
+
+  .hero-present__front {
+    margin-right: 0;
+
+    &-img {
+      display: none;
+
+      &--small {
+        display: block;
+      }
+    }
+  }
+
+  .hero-discount {
+    top: 44%;
+    right: auto;
+    z-index: 2;
+    left: -60px;
+  }
+}
+
+@media (max-width:600px) {
+  .hero-present__front {
+    width: 240px;
+  }
+}
+
+@media (max-width:580px) {
+  .hero-discount {
+    top: 33%;
+  }
+
+  .hero-list__item-text {
+    max-width: 210px;
+
+    .br {
+      display: block;
+    }
+  }
+
+  .hero-present__front {
+    width: 200px;
+
+    &-decor {
+      width: 130px;
+      left: auto;
+      right: 5px;
+    }
+  }
+}
+
+@media (max-width:450px) {
+  .hero-content {
+    padding: 32px 5px 60px;
+  }
+
+  .hero-discount {
+    width: 96px;
+    height: 96px;
+
+    top: -19%;
+    left: auto;
+    right: 0;
+  }
+  .hero-actions{
+    padding: 0 5px;
+  }
+}
+
+@media (max-width:420px) {
+  .hero-present__front {
+    width: 180px;
+  }
+
+  .hero-discount {
+    top: -34%;
+  }
+  .hero-present__front-decor {
+    width: 115px;
+}
+}

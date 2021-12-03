@@ -1,0 +1,23 @@
+@import '../../node_modules/reset-css/sass/reset';
+@import './settings/classFrame';
+@import './settings/vars';
+@import './vendor/mixins';
+@import './settings/fonts';
+@import './settings/global';
+
+
+@import './components/header';
+@import './components/hero';
+@import './components/present';
+@import './components/video';
+@import './components/benefits';
+@import './components/functions';
+@import './components/conditions';
+@import './components/reviews';
+@import './components/order';
+@import './components/hero-after';
+@import './components/timer';
+@import './components/form';
+@import './components/footer';
+
+

@@ -1,0 +1,13 @@
+.timer{
+  &__text{
+    font:400 13px/15px var(--font);
+    color:$black;
+  }
+  &-count{
+    font:700 36px/42px var(--font);
+    color: $black;
+  }
+  &-delimeter{
+    @extend .timer-count;
+  }
+}

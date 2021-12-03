@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+body {
+	letter-spacing: 0.43px;
+	font: 400 20px/24px var(--font);
+	color: $default;
+	overflow-x: hidden;
+}
+.btn-reset {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	color: inherit;
+	font: inherit;
+	padding: 0;
+}
+.wrapper{
+	max-width: 1950px;
+	margin: 0 auto;
+}
+.container {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.hide {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	position: absolute;
+	transition: opacity 1.3s;
+}
+
+.title{
+	font:900 35px/41px var(--font);
+	text-align: center;
+	text-transform: uppercase;
+	max-width: 535px;
+	margin: 0 auto 40px;
+	&--accent{
+		color: $accent;
+	}
+}
+.link {
+	max-width: 370px;
+	width: 100%;
+	padding: 21px 0;
+	background: radial-gradient(71.08% 71.08% at 50% 28.92%, #FFECA9 0%, #FFC700 100%);
+	border-radius: 50px;
+	font: 500 35px / 41px var(--font);
+	text-align: center;
+	position: relative;
+	transition:all .3s;
+	display: block;
+	&::first-letter{
+		text-transform: uppercase;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50px;
+		background-color: #BA9100;
+		z-index: -1;
+		transition: all .3s;
+	}
+
+	&:hover {
+		background-position:50px;  
+		.link__text{
+			transition:all .3s;
+			transform: rotateX(0deg);
+		}
+		&::after {
+			transition: all .3s;
+			top: 0;
+		}
+	}
+	&:active{
+		.link__text{
+					transition:all .3s;
+					transform: rotateX(0deg);
+				}
+				&::after {
+					transition: all .3s;
+					top: 0;
+				}
+	}
+
+	&__text {
+		transition:all .3s;
+		background-color: #886B03;
+		color: transparent;
+		background-clip: text;
+		width: fit-content;
+		margin:0 auto;
+		text-shadow: 0px 1px 4px #886B03, 0 0 0 #000, 1px 4px 6px transparent;
+		transform: rotateX(30deg);
+		display: block;
+	}
+
+}

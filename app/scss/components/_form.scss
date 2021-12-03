@@ -1,0 +1,36 @@
+.form {
+  width: 100%;
+  padding: 0 5px;
+  margin-bottom: 30px;
+  &__btn{
+    width: 100%;
+    margin:0 auto;
+  }
+  &__label{
+    margin-bottom: 5px;
+    display: block;
+    padding-left: 25px;
+  }
+  &__input {
+    background: #F9F9F9;
+    border-radius: 40px;
+    width: 100%;
+    margin-bottom: 30px;
+    font: 400 18px / 24px var(--font-second);
+    height: 75px;
+    outline: 2px solid transparent;
+    border: 1px solid #2B2B2B;
+    padding: 0 25px;
+    color: #121212;
+    text-align: center;
+    &::placeholder {
+      font: 400 18px / 24px var(--font-second);
+      color: #727272;
+      text-align: center;
+    }
+  }
+  &-text{
+    font:400 18px / 24px var(--font-second);
+    color: #2B2B2B;
+  }
+}

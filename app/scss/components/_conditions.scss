@@ -1,0 +1,43 @@
+.conditions {
+  background-color: #232323;
+  padding: 60px 0;
+  z-index: 1;
+  position: relative;
+  &__title{
+    color: $white;
+  }
+
+  &__link {
+    margin: 0 auto;
+  }
+  &-slider{
+    margin-bottom: 30px;
+  }
+}
+.swiper{
+  margin-bottom: 30px;
+}
+.swiper-pagination{
+  position: sticky;
+  width: fit-content;
+  font:500 35px/41px var(--font);
+  color:$white;
+}
+.slider-nav{
+  gap:30px
+}
+.swiper-btn-next,
+.swiper-btn-prev{
+  width: 44px;
+  height: 44px;
+  @extend %bg-contain;
+  cursor: pointer;
+  border:none;
+  outline: none;
+}
+.swiper-btn-next{
+  background-image: url('../images/dest/arrow-next.png');
+}
+.swiper-btn-prev{
+  background-image: url('../images/dest/arrow-prev.png');
+}

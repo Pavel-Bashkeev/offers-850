@@ -1,0 +1,28 @@
+.order{
+  padding: 70px 0 50px;
+  background-color: $accent;
+  &__title{
+    color:$white;
+  }
+  &-items{
+    gap:25px 35px;
+  }
+}
+.order-item{
+  max-width: 280px;
+  &__box{
+    border-radius: 50%;
+    width: 108px;
+    height: 108px;
+    margin-bottom: 30px;
+  }
+  &__title{
+    color:$white;
+    text-align: center;
+    font:900 20px/24px var(--font);
+    margin-bottom: 10px;
+  }
+  &__text{
+    color:$white;
+  }
+}
