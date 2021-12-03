@@ -52,7 +52,9 @@ body {
 	position: absolute;
 	transition: opacity 1.3s;
 }
-
+.text-accent{
+	color:#f00;
+}
 .title{
 	font:900 35px/41px var(--font);
 	text-align: center;
@@ -124,4 +126,10 @@ body {
 		display: block;
 	}
 
+}
+@media (max-width:420px) {
+	.title{
+		font-size: 25px;
+		line-height: 30px;
+	}
 }
