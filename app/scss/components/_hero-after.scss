@@ -1,19 +1,26 @@
 .hero-after{
   .container{
     .hero-content{
-      grid-template-areas:
-      'title title'
-      'subtitle subtitle'
-      '. banner'
-      'action price'
-      'action .'
-      'remains remains'
-    ;
+      .hero-list{
+        display: none;
+      }
+    }
+    .hero-actions{
+      margin-top: -18%;
     }
   }
 }
-.hero-action{
-  grid-area: action;
-  width: 380px;
-  padding: 0 5px;
+@media (max-width:1150px) {
+  .hero-after{
+    .container{
+      .hero-content{
+        .hero-list{
+          display: block;
+        }
+      }
+      .hero-actions{
+        margin-top: 0%;
+      }
+    }
+  }
 }

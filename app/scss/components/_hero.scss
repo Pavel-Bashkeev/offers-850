@@ -24,6 +24,7 @@
   &-actions {
     position: relative;
     z-index: 1;
+    max-width: 370px;
   }
 
   &__title {
@@ -226,6 +227,9 @@
 
     &__link {
       margin: 0 auto 45px;
+    }
+    &-actions{
+      margin: 0 auto;
     }
   }
 

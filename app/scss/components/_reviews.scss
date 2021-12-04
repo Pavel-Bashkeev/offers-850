@@ -109,7 +109,12 @@
       }
     }
   }
+  &-action{
+    margin-top: auto;
+    display: block;
+  }
 }
+
 .reviews-slider-nav{
   gap:30px;
 }
@@ -130,4 +135,11 @@
 }
 .reviews-swiper-btn-next{
   background-image: url('../images/dest/sliderReviews/arrow-next.png');
+}
+
+@media (max-width:1100px) {
+  .reviews-swiper-btn-prev,
+.reviews-swiper-btn-next{
+  display: block;
+}
 }
