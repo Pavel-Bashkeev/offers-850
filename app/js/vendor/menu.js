@@ -9,6 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
       link.parentNode.classList.add('menu-list__item--active');
       burger.classList.remove('burger-btn--active');
       menu.classList.remove('menu--active');
+      
+    document.body.classList.remove('hidden');
     })
     link.addEventListener('mouseenter', () => {
       link.parentNode.classList.add('menu-list__item--active');
